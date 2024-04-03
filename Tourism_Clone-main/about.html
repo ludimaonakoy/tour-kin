@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+</head>
+<style>
+    body{
+        
+    }
+   /* ------------------about-------------------- */
+#about {
+    padding: 80px 0;
+    color: #ababab;
+    background-color: black;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .about-col1 {
+    flex-basis: 35%;
+  }
+  .about-col1 img {
+    width: 100%;
+    border-radius: 30px;
+  }
+  .about-col2 {
+    flex-basis: 60%;
+  }
+  /* ------------------about-------------------- */
+  /* ------------------titles under about-------------------- */
+  .sub-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .tab-title {
+    display: flex;
+    margin: 20px 0 40px;
+  }
+  /* ------------------titles under about-------------------- */
+  .tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+  }
+  .tab-links::after {
+    content: " ";
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+  }
+  .tab-links.active-link::after {
+    width: 50%;
+  }
+  .tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+  }
+  .tab-contents ul li span {
+    color: #b54769;
+    font-size: 14px;
+  }
+  /* ------------------contents under about-------------------- */
+  /* ------------------contents skills hidden under about-------------------- */
+  .tab-contents {
+    display: none;
+  }
+  /* ------------------contents skills visible under about-------------------- */
+  .tab-contents.active-tab {
+    display: block;
+  }
+  /* ------------------services session-------------------- */
+  #services {
+    padding: 30px 0;
+  }
+  
+  /* ------------------display in a grid mode best one : servives -------------------- */
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+  }
+  /* -------------style the services (grid): servives ------------ */
+  .services-list div {
+    background: #262626;
+    padding: 40px;
+    font-size: 14px;
+    font-weight: 300;
+    border-radius: 18px;
+    /* ------- 1. enable transition whenever the curser is over --------- */
+    transition: background 0.5s, transform 0.5s;
+  }
+  /* ------------------style the icons: servives -------------------- */
+  .services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  .services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  .services-list div p {
+    font-size: 13px;
+    font-weight: 300;
+  }
+  .services-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  /* ---------- 2. enable transition whenever the curser is over ------------- */
+  .services-list div:hover {
+    background: #ff004f;
+    transform: translatey(-10px);
+  }
+
+</style>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+      
+      html {
+        box-sizing: border-box;
+      }
+      
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+      
+      .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+      
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+      }
+      
+      .about-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #474e5d;
+        color: white;
+      }
+      
+      .container {
+        padding: 0 16px;
+      }
+      
+      .container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+      .title {
+        color: grey;
+      }
+      
+      .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
+      
+      .button:hover {
+        background-color: #555;
+      }
+      
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }
+      
+      
+</style>
+<body>
+    <!-- -------------about------------ --> 
+    <div id="about">
+<div class="container" >
+    <div class="row">
+        <div class="about-col1">
+            <img src="kin/profile&about/jr.JPG" alt="juniorludima">
+        </div>
+        <div class="about-col2"><h1 class="sub-title">About Me</h1>
+            <p>I'm Junior Ludima Onakoy,student at Jomo Kenyatta University of Agriculture and technology,
+                I'm currently pursuing Bachelor of Engineering in Information Technoloy from Jomo Kenyatta University of Agriculture and Technology(JKUAT).
+                I can work in  different filds such as : Data Analyses, Database Management System, Web Development And Computer Network.
+                I'm also passionate about technology and I'm always looking for new opportunities. I can work for an information technology company that other individuals 
+                or businesses use to manage their web and software needs. Or as part of an in-house IT Department at a larger company to  maintain internet connectivity,
+                Backup Information, troubleshooting problems.
+            </p>
+                 <!-- -------------tab-links under about------------ --> 
+                <div class="tab-title">
+                     <!-- -------------onclick function under javascript------------ -->
+                    <p class="tab-links active-link"  onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"  onclick="opentab('experience')">Experience</p>
+                    <!-- <p class="tab-links" onclick="opentab('education')">Education</p> -->
+                </div>
+                 <!-- -------------first tab-contents under about : skills------------ --> 
+                <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Database admin</span><br>Designing Database</li>
+                    <li><span>Data Analyst</span><br>Analyzing Data</li>
+                    <li><span>Network Engineer</span><br>Implement The Computer Network</li>
+                    <li><span>Web Development</span><br>Web App Development</li>
+                    
+                </ul>
+            </div> 
+             <!-- -------------second tab-contents under about: experience------------ --> 
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2020 - 2021</span><br>Internship at Office Congolais of Control</li>
+                    <li><span>2021 - 2022</span><br> Database Training </li>
+                    <li><span>2021 - 2022</span><br>Network Computer Training</li>
+                    <li><span>2020 - 2021</span><br>Internship at Office Congolais of Control</li>
+                    <li><span>2023 - 2024</span><br>Attachement at Amref </li>
+                    <li><span>2024 - 2025</span><br>intership at Amref </li>
+                </ul>
+            </div> 
+             <!-- -------------trhid tab-contents under about : education------------ --> 
+            <!-- <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2019</span><br>College from ISIPA</li>
+                    <li><span>2020 </span><br>Training from CKalonda</li>
+                    <li><span>2021 - current</span><br>IT from JKUAT</li>
+                </ul>
+            </div>  -->
+        </div>
+                <!-- -------------End of tab-contents and sub=titles------------ --> 
+
+    </div>
+
+</div>
+    </div>
+    <h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="kin/profile&about/ceo01.webp" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Emily Bella </h2>
+        <p class="title">Analyst</p>
+        <p>conduct research and analyze publicly available or privately collected data to find patterns,
+             trends, and insights that can help in decision-making and planning..</p>
+        <p>Emily@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="kin/profile&about/ceo02.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Junior Ross</h2>
+        <p class="title">Art Director</p>
+        <p> is a person who produces or creates art using conscious skill and creative imagination.
+             Designer is a person who visualizes a concept that is in the abstract form and prepares the blueprint..</p>
+        <p>junior@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="kin/profile&about/ceo03.webp" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Ashay Osman</h2>
+        <p class="title">Developer</p>
+        <p> is a technology professional who works on, builds and creates software, 
+            websites, developers require a knowledge of coding to write 
+            and debug source code for applications...</p>
+        <p>Ashay@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script>
+    // declare two variables 
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    //define the function with the onclick function whiche is called opentab
+    function opentab(tabname){
+        // to make the skills invisible once clicked with remove method
+        for (tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        // to make the skills invisible once clicked with remove method
+        for (tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        // display the color of experience and education once clicked
+        event.currentTarget.classList.add("active-link");
+        // display the content of experience and education once clicked
+        document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+</html>
